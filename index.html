@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jalapeño Clicker</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #4caf50;
+        }
+
+        #jalapeno {
+            font-size: 100px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        #jalapeno:hover {
+            transform: scale(1.2);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #e64a19;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Jalapeño Clicker!</h1>
+        <p>Haz clic en el jalapeño para obtener puntos.</p>
+        <div id="jalapeno" onclick="ganarPuntos()">
+            🌶️
+        </div>
+        <p id="puntos">Puntos: 0</p>
+        <button id="mejorar" onclick="mejorar()">
+            Mejorar: +1 punto por clic (Costo: 10 puntos)
+        </button>
+    </div>
+
+    <script>
+        // Lógica del juego en JavaScript
+        let puntos = 0;
+        let puntosPorClic = 1;
+
+        function ganarPuntos() {
+            puntos += puntosPorClic;
+            actualizarPuntos();
+        }
+
+        function actualizarPuntos() {
+            document.getElementById("puntos").innerText = "Puntos: " + puntos;
+        }
+
+        function mejorar() {
+            if (puntos >= 10) {
+                puntos -= 10;
+                puntosPorClic += 1;
+                actualizarPuntos();
+            } else {
+                alert("¡No tienes suficientes puntos para mejorar!");
+            }
+        }
+    </script>
+</body>
+</html>
