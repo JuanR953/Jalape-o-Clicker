@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jalapeño Clicker</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <p>Autor: Juan Cruz Rossini</p>
+        <button id="porPeticionDeJustinho" onclick="mostrarTienda()">Tienda</button>
+    </header>
+    <div id="main">
+        <main>
+            <h1>Jalapeño Clicker</h1>
+            <div id="clickeaAqui" onclick="contarClicks()"><img src="https://png.pngtree.com/png-clipart/20230913/original/pngtree-illustration-of-happy-cartoon-chili-jalapeno-vector-png-image_11083362.png" id="Jalapeño" width="300px" height="300px">
+            </div>
+            <p id="textoJalapeño">Haz tu primer jalapeño
+            </p>
+        </main>
+    </div>
+    <section id="tienda">
+        <h2>Sumar Clicks</h2>
+        <button onclick="comprarClicks(3, 200)"><img src="https://cdn-icons-png.flaticon.com/128/4046/4046895.png" alt=""> "Salsa Picante" Comprar 2 clicks mas por $200 jalapeños.</button>
+        <button onclick="comprarClicks(6, 500)"><img src="https://cdn-icons-png.flaticon.com/128/2865/2865984.png" alt=""> "Guantes Resistentes" Comprar 6 clicks mas por $500 jalapeños.</button>
+        <button onclick="comprarClicks(12, 1000)"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968260.png" alt=""> "Inversión Millonaria" Comprar 12 clicks mas por $1000 jalapeños.</button>
+        <button onclick="comprarClicks(30, 2000)"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968260.png" alt=""> "Inversión Millonaria" Comprar 12 clicks mas por $1000 jalapeños.</button>
+        <h2>Skins</h2>
+        <button onclick="comprarSkin(skin2.png, 1000)"><img src="skin2.png" alt=""> Skin 1 - Comprar una skin de jalapeño por $1000 jalapeños.</button>
+        <button onclick="secreta()">Hola</button>
+        <p id="p">Tienes 0 jalapeños</p>
+    </section>
+    <aside id="pantallaVictoria">
+        <h1>Victoria Magistral</h1>
+    </aside>
+
+    <SAmp>PRODUCIDO Y VENDIDO POR JUANCHI Co. Ltd. sociedad anonima no responsable. </SAmp>
+</body>
+</html>
